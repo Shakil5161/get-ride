@@ -29,9 +29,9 @@ const Destination = (props) => {
                     <Card.Body>
                         {
                             !search && <form action="">
-                                <input className="form-control" type="text" name="pickFrom" onBlur={handleBlur} placeholder="Pick From" id="" required/>
+                                <input className="form-control" type="text" name="pickFrom" onBlur={handleBlur} placeholder="Pick From" required/>
                                 <br />
-                                <input className="form-control" type="text" name="pickTo" onBlur={handleBlur} placeholder="Pick To" id="" required/>
+                                <input className="form-control" type="text" name="pickTo" onBlur={handleBlur} placeholder="Pick To" required/>
                                 <br />
                                 <Button type="submit" onClick={() => setSearch(!search)} style={{color:'black'}} variant="outline-warning">Login</Button>
                             </form>

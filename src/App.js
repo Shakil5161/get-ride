@@ -24,9 +24,6 @@ function App() {
   return (
     <div>
       <UserContext.Provider value={[loggedInUSer, setLoggedInUser]}>
-        {
-          console.log("fake data",rideInfo)
-        }
         <Router>
           <Header></Header>
           <Switch>
