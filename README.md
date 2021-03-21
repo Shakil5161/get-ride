@@ -1,17 +1,17 @@
 Live Link: https://get-ride-assignment.web.app/
 
 Using:
-React.js
-React Router
-React Bootstarp
-Fake Data
-React Auth
-Privet Route
+1. React.js
+2. Router
+3. React Bootstarp
+4. Fake Data
+5. React Auth
+6. Privet Route
 
 
 Features:
-Select Vehicle Where You Go
-Form validation
-Login System
-Some Responsive
-Full Functionality
+1. Select Vehicle Where You Go
+2. Form validation
+3. Login System
+4. Some Responsive
+5. Full Functionality
