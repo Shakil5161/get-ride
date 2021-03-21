@@ -42,6 +42,7 @@ const Login = () => {
                 setUser(userInfo);
                 setLoggedInUser(userInfo);
                 history.push(from);
+                console.log(loggedInUSer)
             }).catch((error) => {
                 var errorCode = error.code;
                 var errorMessage = error.message;
@@ -113,13 +114,13 @@ const Login = () => {
 
                     {
                         newUser && <div className="textbox">
-                            <i class="fas fa-user"></i>
+                            <i className="fas fa-user"></i>
                             <input onBlur={handleInputField} name="name" type="text" placeholder="Name" required />
                         </div>
                     }
 
                     <div className="textbox">
-                        <i class="fas fa-envelope"></i>
+                        <i className="fas fa-envelope"></i>
                         <input onBlur={handleInputField} name="email" type="text" placeholder="Email" required />
                     </div>
                     <div className="textbox">
@@ -134,10 +135,10 @@ const Login = () => {
                     }
                     
                     {
-                        newUser ? <button className="btn">Register</button> : <button className="btn">Log in</button>
+                        newUser ? <button type = "submit" className="btn">Register</button> : <button type = "submit" className="btn">Log in</button>
                     }
                     <div onClick={handleGoogle} className="sign-in-media d-flex justify-content-center align-item-center">
-                        <img src={Google} alt="" srcset="" />
+                        <img src={Google} alt="" srcSet="" />
                         <p className="mb-0 pt-2">Continue With Google</p>
                     </div>
                 </div>

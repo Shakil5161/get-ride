@@ -11,7 +11,7 @@ const Home = (props) => {
             <div className="container m-auto">
                 <CardDeck style={{ padding: '250px 0px' }}>
                     {
-                        mainRide?.map(ride => <Card ><Link to={"/destination/"+ride.catagory}>
+                        mainRide?.map(ride => <Card key={ride.id} ><Link to={"/destination/"+ride.catagory}>
                             <Card.Img className="p-2" variant="top" src={ride.catagoryImgMain} />
                             <Card.Body className="p-0 ">
                                 <Card.Title className="text-center">{ride.catagory}</Card.Title>

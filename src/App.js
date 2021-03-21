@@ -13,6 +13,7 @@ import Destination from './componemts/Destination/Destination';
 import PrivateRoute from './componemts/PrivateRoute/PrivateRoute';
 import Contact from './componemts/Contact/Contact';
 import FakeData from '../src/FakeData/FakeData.json';
+import SelectDestination from './componemts/SelectDestination/SelectDestination';
 export const UserContext = createContext();
 function App() {
   const [loggedInUSer, setLoggedInUser] = useState({});
@@ -38,12 +39,12 @@ function App() {
             <PrivateRoute path="/destination/:item">
               <Destination rideInfo={rideInfo}></Destination>
             </PrivateRoute>
-            {/* <PrivateRoute path="/destination">
-              <Destination></Destination>
-            </PrivateRoute> */}
-            <Route path="/contact">
+            <PrivateRoute path="/destination">
+              <SelectDestination></SelectDestination>
+            </PrivateRoute>
+            <PrivateRoute path="/contact">
               <Contact></Contact>
-            </Route>
+            </PrivateRoute>
             <Route path="/login">
               <Login></Login>
             </Route>

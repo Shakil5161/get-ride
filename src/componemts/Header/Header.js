@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Form, FormControl, Nav, Navbar } from 'react-bootstrap';
+import { Button, Form, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Header.css';
 import Logo from '../Img/logo.png'
@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <Navbar  bg="light" expand="lg">
       <div className="container">
-      <Link className=" main-menu" to="/"><Navbar.Brand > <img height="40px" src={Logo} alt="" srcset=""/> <b style={{fontSize: "20px"}}>Get-Ride</b> </Navbar.Brand></Link>
+      <Link className=" main-menu" to="/"><Navbar.Brand > <img height="40px" src={Logo} alt="" /> <b style={{fontSize: "20px"}}>Get-Ride</b> </Navbar.Brand></Link>
         
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

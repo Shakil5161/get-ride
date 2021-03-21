@@ -7,8 +7,6 @@ const Destination = (props) => {
     const rideInfo = props.rideInfo;
     const multiWay = rideInfo.filter(ride => ride.catagory === item.item);
     console.log("destination multiWay", multiWay);
-    // console.log("destination multiWay", item.item);
-    // console.log("destination", rideInfo[0].catagory);
     const [search, setSearch] = useState(false);
     const [pick, setPick] = useState({})
     const handleBlur = (e) => {
@@ -31,11 +29,11 @@ const Destination = (props) => {
                     <Card.Body>
                         {
                             !search && <form action="">
-                                <input class="form-control" type="text" name="pickFrom" onBlur={handleBlur} placeholder="Pick From" id="" required/>
+                                <input className="form-control" type="text" name="pickFrom" onBlur={handleBlur} placeholder="Pick From" id="" required/>
                                 <br />
-                                <input class="form-control" type="text" name="pickTo" onBlur={handleBlur} placeholder="Pick To" id="" required/>
+                                <input className="form-control" type="text" name="pickTo" onBlur={handleBlur} placeholder="Pick To" id="" required/>
                                 <br />
-                                <Button onClick={() => setSearch(!search)} style={{color:'black'}} variant="outline-warning">Login</Button>
+                                <Button type="submit" onClick={() => setSearch(!search)} style={{color:'black'}} variant="outline-warning">Login</Button>
                             </form>
                         }
 
@@ -50,7 +48,7 @@ const Destination = (props) => {
                                     </div>
                                 </div>
                                 {
-                                    multiWay.map( way => <div className="card mb-3" style={{borderRadius: "10px"}}>
+                                    multiWay.map( way => <div key={way.id} className="card mb-3" style={{borderRadius: "10px"}}>
                                     <div className="row g-0" >
                                         <div className="col-md-4 text-center">
                                             <img height="50px"  src={way.catagoryMiniImg} alt="..." />
@@ -58,7 +56,7 @@ const Destination = (props) => {
                                         <div className="col-md-8">
                                             <div className="card-body d-flex justify-content-center p-3">
                                                 <h5 className="card-title pr-3">{way.catagory}</h5>
-                                                <img height="25px" src={People} alt="" srcset="" />
+                                                <img height="25px" src={People} alt="" srcSet="" />
                                                 <h5 className="card-title pr-3">{way.person}</h5>
                                                 <h5 className="card-title">${way.rent}</h5>
                                             </div>
@@ -71,7 +69,7 @@ const Destination = (props) => {
                     </Card.Body>
                 </Card>
             </div>
-            <div className="col-sm-8"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d29199.92106102865!2d90.38611378465575!3d23.818949918249125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1616234083804!5m2!1sen!2sbd" style={{ borderRadius: "10px", width: "100%", height: "580px", border: '0', allowfullscreen: "", loading: "lazy", }}></iframe></div>
+            <div className="col-sm-8"><iframe title="Get Ride Search Location" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d29199.92106102865!2d90.38611378465575!3d23.818949918249125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1616234083804!5m2!1sen!2sbd" style={{ borderRadius: "10px", width: "100%", height: "580px", border: '0', allowfullscreen: "", loading: "lazy", }}></iframe></div>
         </div>
     );
 };
