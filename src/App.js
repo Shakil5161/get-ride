@@ -14,6 +14,7 @@ import PrivateRoute from './componemts/PrivateRoute/PrivateRoute';
 import Contact from './componemts/Contact/Contact';
 import FakeData from '../src/FakeData/FakeData.json';
 import SelectDestination from './componemts/SelectDestination/SelectDestination';
+import Footer from './componemts/Footer/Footer';
 export const UserContext = createContext();
 function App() {
   const [loggedInUSer, setLoggedInUser] = useState({});
@@ -49,6 +50,7 @@ function App() {
               <NotFound></NotFound>
             </Route>
           </Switch>
+          <Footer></Footer>
         </Router>
       </UserContext.Provider>
     </div>

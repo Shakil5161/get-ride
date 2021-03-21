@@ -7,7 +7,7 @@ const Home = (props) => {
     console.log(rideInfo);
     const mainRide = rideInfo?.filter(ride => ride.display === "home");
     return (
-        <div className="container-fluid background-img">
+        <div style={{ backgroundColor:"#EFEFEF"}} className="container-fluid">
             <div className="container m-auto">
                 <CardDeck style={{ padding: '250px 0px' }}>
                     {
